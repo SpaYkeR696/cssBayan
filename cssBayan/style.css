@@ -10,33 +10,62 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    margin: 0 auto;
+    padding: 0 auto;
+    color: #250dd9;
+    transition: .2s;
+}
+
+h2:hover {
+    color: #000;
+}
+
 /* Редактирование блоков */
 
 .faq {
     max-width: 1200px;
     margin: 20px auto;
+    transition: color 0.5s, padding 0.5s;   
 }
 
 .faq-item {
-    border-bottom: 1px solid #000 ;
+    border: 1px solid #000 ;
+    margin-bottom: 10px;
 }
 
 .faq-title {
     display: block;
     cursor: pointer;
-}
-
-.faq-input {
-    appearance: none;
+    padding: 10px 15px;
 }
 
 .mem {
-    display: none;
-    align-items: center;
+    height: 0;
+    display: flex;
+    justify-content: center;
+    transition: all 1s;
+    overflow: hidden;
 }
 
 .mem img {
     max-width: 500px;
     display: flex;
     justify-content: center;
+    margin-bottom: 10px;
 }
+
+.faq-input {
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.faq-input:checked +  .mem {
+    height: 500px;
+}
+
+
+
